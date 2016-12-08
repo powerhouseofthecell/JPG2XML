@@ -31,8 +31,12 @@ Obtaining the Source Code
 1. The source code is available at https://github.com/powerhouseofthecell/JPG2XML.git
 2. And, before anything is run, give the software file permission to execute by entering ‘chmod +x img_to_xml.sh’
 
-Installing music21
-1. This is as easy as ‘pip3 install music21’
+Installing music21 and pillow
+1. This is as easy as ‘pip3 install music21 pillow’
+2. music21 allows for writing to xml files, and pillow is image manipulation software
+
+Finally, edit keras.json
+1. This is the final step, due to settings shifts in the past and adjustments in the new version of keras, the order of shapes for input objects has changed. As a result, please use your favorite text editor (mine is nano) and type 'text_editor ~/.keras/keras.json' and from there, change the line reading 'image_dim_ordering' from 'tf' to 'th'. Exit and save. 
 
 The software is now ready to run!
 
