@@ -5,7 +5,7 @@
 length_model = './app/models/length/length_model99.h5'
 
 # similarly, this line sets the model for classifying each image's pitch
-pitch_model = './app/models/pitch/pitch_model99_2.h5'
+pitch_model = './app/models/pitch/pitch_model99_3.h5'
 
 # this line establishes where to pull the templates from
 templates = ['./app/templates/t1.jpg', './app/templates/t2.jpg']
