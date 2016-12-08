@@ -32,4 +32,4 @@ model.fit_generator(train_generator, samples_per_epoch=6440, nb_epoch=25, valida
 dt = datetime.datetime.now()
 
 # save the model, for use later in classifying notes
-model.save('./app/models/pitch/pitch_model-%s-%s-%s-%s-%s.h5' % (dt.minute, dt.hour, dt.day, dt.month, dt.year))
+model.save('../../pitch/pitch_model-%s-%s-%s-%s-%s.h5' % (dt.minute, dt.hour, dt.day, dt.month, dt.year))
