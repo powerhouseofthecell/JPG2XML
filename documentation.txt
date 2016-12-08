@@ -26,7 +26,7 @@ Installing Keras with a Tensorflow Backend
 5. A dependency that this project uses is found in h5 files, and so run ‘pip3 install h5py’ to allow for their use and manipulation
 
 Obtaining the Source Code
-1. The source code is available ###### PUT THE URL HERE ##### and can be obtained via Git
+1. The source code is available at https://github.com/powerhouseofthecell/JPG2XML.git
 2. And, before anything is run, give the software file permission to execute by entering ‘chmod +x img_to_xml.sh’
 
 Installing music21
@@ -51,16 +51,16 @@ b. OR you can edit the config.py file (found at app/config.py) and change the li
 Changing models:
 1. This software uses machine learning algorithms to identify the pitches and lengths of notes that have been pulled from the input image, and if you would like to experiment with different models or different datasets, this software can easily output a new model. 
 2. You can adjust dataset
-a. To change the data set used by either the length or pitch model, go to their respective directory in app/models/build/, and enter the data/ directory.
-b. Here is where you will find two directories, one for training, and one for validation
-c. Under each of those is a set of directories that constitutes the classes into which the software needs to learn to group input data. 
-d. In order to change the dataset used for training, enter these class directories and input new data that corresponds to the labels for the classes (the directory names). Ex. all ‘a’ note images should be placed in the directory labeled ‘a’
-e. Step d is the same for adjusting the validation data for the model
-f. Note: When the size of the datasets is adjusted, running the software may throw an insignificant warning about the fact that batch size and total sample size do not work out, but these can be adjusted in ‘x_classifier_maker.py’ located in the app/models/build/ directories
+       a. To change the data set used by either the length or pitch model, go to their respective directory in app/models/build/, and enter the data/ directory.
+       b. Here is where you will find two directories, one for training, and one for validation
+       c. Under each of those is a set of directories that constitutes the classes into which the software needs to learn to group input data. 
+       d. In order to change the dataset used for training, enter these class directories and input new data that corresponds to the labels for the classes (the directory names). Ex. all ‘a’ note images should be placed in the directory labeled ‘a’
+       e. Step d is the same for adjusting the validation data for the model
+       f. Note: When the size of the datasets is adjusted, running the software may throw an insignificant warning about the fact that batch size and total sample size do not work out, but these can be adjusted in ‘x_classifier_maker.py’ located in the app/models/build/ directories
 3. You can also adjust the model itself (this should only be done if you have made a backup of the original models, in case a change you make breaks the model) 
-a. The model files are located within app/models/build/ in their respective directories
-b. The ‘modelBuilder.py’ files in those directories build the actual model, layer by layer, and define how each layer is activated. Documentation for constructing the models can be found at https://keras.io
-c. Adjusting the ‘x_classifier_maker.py’ files in either directory allows for manipulation of batch size, which is the number of data files that are pulled at a given time for the algorithm to be taught on and intended image dimensions
+       a. The model files are located within app/models/build/ in their respective directories
+       b. The ‘modelBuilder.py’ files in those directories build the actual model, layer by layer, and define how each layer is activated.                       Documentation for constructing the models can be found at https://keras.io
+       c. Adjusting the ‘x_classifier_maker.py’ files in either directory allows for manipulation of batch size, which is the number of data files that are pulled at a given time for the algorithm to be taught on and intended image dimensions
 4. Once your intended customizations/experimentations have been implemented, you can rebuild the model by entering either ‘python3 length_classifier_maker.py’ or ‘python3 pitch_classifier_maker.py’ in their respective directories. 
 5. The output of running the model maker will be a new file in the respective app/models directory that houses the list of models to be used. This new file will be in the format type-minute-hour-day-month-year.h5
 6. In order to use the new model in the software, please edit the config.py file located in app/ and adjust the file names listed under ‘pitch_model’ or ‘length_model’ accordingly
