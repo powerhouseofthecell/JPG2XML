@@ -41,6 +41,7 @@ Note: This software was designed to convert jpeg (.jpg) images of sheet music in
 
 Defaults:
 1. To run with the default configurations (found in app/config.py), simply enter ‘./img_to_xml.sh filename.jpg’ (and hope for the best)
+2. For your convenience, three example files are included with the software, and can be located by looking for files with the extension '.jpg'.
 
 Changing template images:
 1. The software comes pre-loaded with template images that work in many cases, but may not be compatible with your music score. In this case, it may be necessary to obtain your own templates in order for the computer vision software to locate clefs and notes in the image file.
