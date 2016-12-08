@@ -15,8 +15,8 @@ There you will find, under 'browse all files' and 'opencv-unix' the download lin
 1. First, we need to ensure that all proper dependencies have been installed, please run ‘sudo apt-get update’ to make sure your machine is updated. 
 2. ‘sudo apt-get install build-essential’ This will install the compiler
 3. ‘sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev’ These are required dependencies
-4. ‘sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev’ These are optional (but recommended) dependencies
-5. ‘cd ~/[your_opencv_folder]’ then make a temporary directory: ‘mkdir release’ and ‘cd release’
+4. ‘sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev’ These are additional dependencies
+5. If your downloaded opencv-2.4.13.zip was not unzipped, please unzip it and enter the folder: ‘cd ~/[your_opencv_folder]’ then make a temporary directory: ‘mkdir release’ and ‘cd release’
 6. ‘cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ..’
 7. Within the directory ‘release’, enter the command ‘make’. When that is done running (it should take a while), enter ‘sudo make install’ to complete installation. 
 
