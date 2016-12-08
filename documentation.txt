@@ -44,6 +44,7 @@ Running the software:
 Note: This software was designed to convert jpeg (.jpg) images of sheet music into musicxml (.xml) file that can be read by software such as MuseScore or Finale. 
 
 Defaults:
+Note: when the script is run, you may get warnings about music21 needing optional dependencies, these can be safely ignored. You may also get warnings about an exit error involving 'TFStatus,' but these are the results of a bug involving Keras and Tensorflow and can be similarly safely ignored. 
 1. To run with the default configurations (found in app/config.py), simply enter ‘./img_to_xml.sh filename.jpg’ (and hope for the best)
 2. For your convenience, three example files are included with the software, and can be located by looking for files with the extension '.jpg'.
 
